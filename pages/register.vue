@@ -20,6 +20,7 @@ async function handleRegistration(e) {
     await deskree.auth.signUp(form);
     useRouter().push("/");
   } catch (err) {
+    alerts.error(err);
     alerts.error("Error registering, please contact support");
   } finally {
     loading.value = false;
